@@ -1,0 +1,189 @@
+<html>
+
+<head>
+  <script src="smooth.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="pupeteer2.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Nothing+You+Could+Do|Reenie+Beanie" rel="stylesheet">
+</head>
+
+<body>
+  <script>
+    function f() {
+      document.getElementById("here").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+  <div style="height: 100%; background-color: white;">
+    <div class="outer-header-box">
+      <div class="inner-header-box">
+        <div style="display: flex; margin: auto; width: 600px; max-width: 600px; flex-wrap: wrap; justify-content: center;">
+          <div style="width: 600px; font-size: 80px; line-height: 1.3; font-family: 'Amatica SC'; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
+            <span style="color: #b5f;">Pupeteer</span> (alpha)
+          </div>
+          <div style="width: 600px; padding: 15px; line-height: 1.5; padding-bottom: 10px; margin-left: auto; margin-right: auto; ">
+            Vivamus in velit lobortis, pellentesque quam ut, porttitor tellus. Vivamus viverra ultricies egestas. In sit amet nunc risus.
+            Aliquam erat volutpat. Nunc at sem consectetur, lobortis metus in, placerat metus. Suspendisse pharetra, elit
+            et semper ornare, mauris dolor molestie ipsum, ut tempus ante odio id tortor.
+          </div>
+          <div>
+            <div style="width:110px; height:20px; border-bottom: 2px solid #b5f;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content" style="cursor: pointer; text-align: center; height: 200px; padding-top: 0; align-items: center; justify-content: center;">
+      <div style="height: 70px;">
+        <div style="width:40px; height:50px; border-bottom: 2px solid #b5f; margin-left: auto; margin-right: auto;"></div>
+      </div>
+      <div style="height: 70px; font-size: 40px; line-height: 70px; font-family: 'Amatica SC';">
+        Try it!
+      </div>
+      <div style="height: 60px;">
+        Made with love, sweat and blood by achiral.io.
+      </div>
+    </div>
+  </div>
+
+  <div id="here" class="body">
+    <div class="container">         
+      <h2>Getting Started</h2>
+      <p>
+        Pupeteer is a <i>scroll aware</i> animation library for creating websites. It was created for personal use by myself.      
+        Getting started with pupeteer is fairly simple - you just need to reference the JavaScript file (which uses ES5 for compatibility)
+        and annotate your html elements with special attributes, such as <i>p-animation</i>. 
+      </p>
+      <div class="container" style="width: 960px;">
+        <div class="row" style="width: 960px;">
+          <div class="col-md-6" style="padding: 1px;">
+            <div class="red-box" p-animation="inner">
+              <h2>Some Text</h2>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+              quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+              officia deserunt mollitia animi, id est laborum et dolorum fuga.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="red-box" p-animation="inner">
+              <h2>Some Text</h2>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+              quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+              officia deserunt mollitia animi, id est laborum et dolorum fuga.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br/>
+      <p p-animation="fadein">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+        quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+        deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+        aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+        rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+        asperiores repellat. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+        est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+        ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+        ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+      </p>
+      <p p-animation="fadein">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+        quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+        deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+        aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+        rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+        asperiores repellat. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+        est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+        ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+        ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+      </p>
+
+      <h2>Bla Bla Bla</h2>
+      <div p-group>
+        <p p-animation="slidein">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+          quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+          deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+          possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+          aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+          rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+          doloribus asperiores repellat. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+          soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+          assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+          saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
+          delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+        </p>
+        <p p-animation="slidein">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+          quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+          deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+          possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+          aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+          rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+          doloribus asperiores repellat. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+          soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+          assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+          saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
+          delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+          corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+          qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+          distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+          placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut
+          officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+          Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+          perferendis doloribus asperiores repellat. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+          tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+          omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+          necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum
+          hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+          asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+          deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+          sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+          est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus
+          id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+          quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae
+          non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+          consequatur aut perferendis doloribus asperiores repellat. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+          possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+          aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+          rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+          doloribus asperiores repellat.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-content">
+    Vivamus in velit lobortis, pellentesque quam ut, porttitor tellus. Vivamus viverra ultricies egestas. In sit amet nunc risus.
+    Aliquam erat volutpat. Nunc at sem consectetur, lobortis metus in, placerat metus. Suspendisse pharetra, elit et semper
+    ornare, mauris dolor molestie ipsum, ut tempus ante odio id tortor.
+  </div>
+
+  <div class="header">
+    <div class="header-content">
+      <div class="header-item">
+        <span style="color: white;">::</span>
+        <b>
+          pupeteer
+        </b>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
