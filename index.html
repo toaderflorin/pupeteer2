@@ -5,8 +5,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <script src="pupeteer2.js"></script>
+  <link rel="stylesheet" type="text/css" href="puppeteer.css">
+  <script src="pupeteer.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Nothing+You+Could+Do|Reenie+Beanie" rel="stylesheet">
 </head>
@@ -14,7 +14,9 @@
 <body>
   <script>
     function f() {
-      document.getElementById("here").scrollIntoView({ behavior: "smooth" });
+      var el = document.getElementById("xyz");
+      console.log('Element:', el);
+      el.scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
@@ -37,11 +39,11 @@
       </div>
     </div>
 
-    <div class="body-content" style="cursor: pointer; text-align: center; height: 200px; padding-top: 0; align-items: center; justify-content: center;">
+    <div id="xyz" class="body-content" style="cursor: pointer; text-align: center; height: 200px; padding-top: 0; align-items: center; justify-content: center;">
       <div style="height: 70px;">
-        <div style="width:40px; height:50px; border-bottom: 2px solid #b5f; margin-left: auto; margin-right: auto;"></div>
+        <div style="width :40px; height: 60px; border-bottom: 2px solid #b5f; margin-left: auto; margin-right: auto;"></div>
       </div>
-      <div style="height: 70px; font-size: 40px; line-height: 70px; font-family: 'Amatica SC';">
+      <div style="height: 70px; font-size: 40px; line-height: 70px; font-family: 'Amatica SC';" onclick="f()">
         Try it!
       </div>
       <div style="height: 60px;">
@@ -50,14 +52,35 @@
     </div>
   </div>
 
-  <div id="here" class="body">
-    <div class="container">         
+  <div class="body">
+    <div class="container">
       <h2>Getting Started</h2>
       <p>
-        Pupeteer is a <i>scroll aware</i> animation library for creating websites. It was created for personal use by myself.      
-        Getting started with pupeteer is fairly simple - you just need to reference the JavaScript file (which uses ES5 for compatibility)
-        and annotate your html elements with special attributes, such as <i>p-animation</i>. 
+        Pupeteer is a <i>scroll aware</i> animation library for creating websites. It was created for personal use by myself.
+        Getting started with pupeteer is fairly simple - you just need to reference the JavaScript file (which uses ES5 for
+        compatibility) and annotate your html elements with special attributes, such as <i>p-animation</i>.
       </p>
+      <p>
+        The simplest way to use it would be something like this:
+      </p>
+
+      <div style="width: 780px;">
+        <script src="https://gist.github.com/toaderflorin/973be5101b88206047fef82806038b26.js"></script>
+      </div>    
+
+      <p p-animation="fadein">
+        <b>This is a <b>fade-in</b> animation.</b>
+        <div>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+          quos dolores et quas molestias excepturi sint occaecati cupiditate non providen.
+        </div>
+      </p>
+
+      <p p-animation="slidein">
+        This is a <b>fade-in</b> animation.
+      </p>
+
+
       <div class="container" style="width: 960px;">
         <div class="row" style="width: 960px;">
           <div class="col-md-6" style="padding: 1px;">

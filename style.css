@@ -9,8 +9,12 @@ body {
   font-weight: 300;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Amatica SC';
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .header {
@@ -94,42 +98,4 @@ h1, h2 {
   border-radius: 10px;
   color: white;
   box-shadow: 0px 12px 23px -9px rgba(0, 0, 0, 0.7);
-}
-
-@keyframes slidein {
-  0% {
-    margin-top: 30px;
-    opacity: 0;
-  }
-}
-
-.slidein {
-  animation-duration: 1.2s;
-  animation-name: slidein;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadein {
-  animation-duration: 3s;
-  animation-name: fadein;
-}
-
-@keyframes inner {
-  0% {
-    padding-top: 30px;
-    opacity: 0.5;
-  }
-}
-
-.inner {
-  animation-duration: 1.2s;
-  animation-name: inner;
 }
