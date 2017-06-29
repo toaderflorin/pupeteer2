@@ -6,9 +6,19 @@ var update = function () {
   allElements.forEach(function (e) {
     var rect = e.getBoundingClientRect();
     var anim = e.getAttribute('p-animation');
+    var delay = e.getAttribute('p-delay');
 
     if (rect.top < window.innerHeight && rect.top > 0 && !scrollUp) {
-      e.classList.add(anim);
+      if (delay) {
+        window.setTimeout(function () {
+          e.classList.add(anim);
+        }, delay);
+      } else {
+         window.setTimeout(function () {
+          e.classList.add(anim);
+        }, 0);
+      }
+     
     } else if (rect.top > window.innerHeight) {
       e.classList.remove(anim);
     }
