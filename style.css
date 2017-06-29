@@ -71,17 +71,20 @@ h3 {
   padding: 5px;
   padding-top: 20px;
   background-color: white;
-  border-bottom: 1px solid rgba(187, 85, 255, 0.4);
+}
+
+.footer {
+  border-top: 1px solid rgba(187, 85, 255, 0.3);
 }
 
 .footer-content {
   width: 640px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 13px;
-  min-height: 120px;
+  min-height: 56px;
   text-align: center;
 }
 
