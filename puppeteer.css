@@ -1,6 +1,6 @@
 @keyframes slidein {
   0% {
-    margin-top: 30px;
+    margin-top: 50px;
     opacity: 0;
   }
 }
@@ -10,18 +10,38 @@
   animation-name: slidein;
 }
 
+@keyframes slidein-left {
+  0% {
+    margin-left: -60px;
+    opacity: 0;
+  }
+}
+
+.slidein-left {
+  animation-duration: 1.2s;
+  animation-name:  slidein-left;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  } 
 }
 
 .fadein {
   animation-duration: 3s;
   animation-name: fadein;
+}
+
+@keyframes blurin {
+  0% {
+    filter: blur(5px);
+  }
+}
+
+.blurin {
+  animation-duration: 1s;
+  animation-name: blurin;
 }
 
 @keyframes inner {
@@ -34,4 +54,15 @@
 .inner {
   animation-duration: 1.2s;
   animation-name: inner;
+}
+
+@keyframes colorin {
+  0% {
+    filter: grayscale(1);
+  }
+}
+
+.colorin {
+  animation-duration: 2s;
+  animation-name: colorin;
 }

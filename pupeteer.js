@@ -9,8 +9,8 @@ var update = function () {
 
     if (rect.top < window.innerHeight && rect.top > 0 && !scrollUp) {
       e.classList.add(anim);
-    } else if (rect.top > window.innerHeight) {           
-      e.classList.remove(anim);    
+    } else if (rect.top > window.innerHeight) {
+      e.classList.remove(anim);
     }
   });
 }
