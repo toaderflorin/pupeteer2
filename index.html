@@ -5,8 +5,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="puppeteer.css">
-  <script src="pupeteer.js"></script>
+  <script src="puppeteer.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Nothing+You+Could+Do|Reenie+Beanie" rel="stylesheet">
 </head>
@@ -17,7 +18,7 @@
       window.scroll({ top: 0, left: 0, behavior: 'smooth' });
     }
 
-    function f() {
+    function start() {
       var el = document.getElementById("xyz");
       el.scrollIntoView({ behavior: "smooth" });
     }
@@ -27,9 +28,9 @@
   <div class="header">
     <div class="header-content">
       <div class="header-item">
-        <span style="color: white;">::</span>
+        <i class="fa fa-film" aria-hidden="true"></i>
         <b onclick="scrollToTop()" style="cursor: pointer;">
-          pupeteer
+          puppeteer
         </b>
       </div>
     </div>
@@ -40,11 +41,11 @@
       <div class="inner-header-box">
         <div style="display: flex; margin: auto; width: 600px; max-width: 600px; flex-wrap: wrap; justify-content: center;">
           <div style="width: 640px; font-size: 60px; line-height: 1.3; font-family: 'Amatica SC'; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
-            <span style="color: #b5f;">pupeteer</span> (pre-alpha)
+            <span style="color: #b5f;">puppeteer</span> (pre-alpha)
           </div>
-          <div p-animation="slidein" style="width: 640px; padding: 15px; line-height: 1.5; padding-bottom: 10px; margin-left: auto; margin-right: auto; ">
-            <b>pupeteer</b> is a scroll aware, mobile first, animation library for creating websites. It is currently work
-            in progress, do not use it yet.
+          <div style="width: 640px; padding: 15px; line-height: 1.5; padding-bottom: 10px; margin-left: auto; margin-right: auto; ">
+            <b>puppeteer</b> is a scroll aware, mobile first, animation library for creating presentation websites. It is
+            currently work in progress and not ready for production.
           </div>
           <div>
             <div style="width:110px; height:20px; border-bottom: 2px solid #b5f;"></div>
@@ -57,7 +58,7 @@
       <div style="height: 70px;">
         <div style="width :40px; height: 60px; border-bottom: 2px solid #b5f; margin-left: auto; margin-right: auto;"></div>
       </div>
-      <div style="height: 70px; font-size: 40px; line-height: 70px; font-family: 'Amatica SC';" onclick="f()">
+      <div style="height: 70px; font-size: 40px; line-height: 70px; font-family: 'Amatica SC';" onclick="start()">
         Try it!
       </div>
       <div style="height: 60px;">
@@ -70,9 +71,9 @@
     <div class="section-wrapper-840px">
       <h2>Getting Started</h2>
       <p>
-        Pupeteer is a <i>scroll aware</i> animation library for creating websites. It was created for personal use by myself.
-        Getting started with pupeteer is fairly simple - you just need to reference the JavaScript file (which uses ES5 for
-        compatibility) and annotate your html elements with special attributes, such as <i>p-animation</i>.
+        Puppeteer is a <i>scroll aware</i> animation library for creating websites. It was created for personal use by myself.
+        Getting started with puppeteer is fairly simple - you just need to reference the JavaScript file (which uses ES5
+        for compatibility) and annotate your html elements with special attributes, such as <i>p-animation</i>.
       </p>
 
       <script src="https://gist.github.com/toaderflorin/d983f06a902e124d83477e8ce5063963.js"></script>
@@ -86,67 +87,58 @@
 
       <script src="https://gist.github.com/toaderflorin/973be5101b88206047fef82806038b26.js"></script>
 
-      <br>
-      <p>
-        They look like this:
-      </p>
+      <br/>
+      <h2>Animation Library</h2>
 
-      <div class="example-box" p-animation="fadein">
-        <i>This is a <b>fadein</b> animation.</i>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis lorem vitae mauris aliquam, sit amet posuere erat
-          posuere. Vivamus efficitur, mauris eget placerat mollis, felis ligula volutpat lorem, eget pellentesque arcu dui
-          sed nulla. Mauris non iaculis velit. Morbi id consectetur nisl. Aliquam turpis dui, aliquam a vestibulum quis,
-          efficitur vel massa.
+      <div class="container" style="width: 840px;">
+        <div class="row">
+          <div class="col-md-4">
+            <div p-animation="vertical" style="width: 196px; height: 196px; background: black;">
+              Col 1
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div p-animation="horizontal" style="width: 196px; height: 196px; background: black;">
+              col 2
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div p-animation="blur" style="width: 196px; height: 196px; background: black;">
+              col 3
+            </div>
+          </div>
         </div>
-      </div>
-
-      <br>
-      <p>
-        This is a <b>slidein</b> animation.
-      </p>
-
-      <div class="example-box" p-animation="slidein">
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis lorem vitae mauris aliquam, sit amet posuere erat
-          posuere. Vivamus efficitur, mauris eget placerat mollis, felis ligula volutpat lorem, eget pellentesque arcu dui
-          sed nulla. Mauris non iaculis velit. Morbi id consectetur nisl. Aliquam turpis dui, aliquam a vestibulum quis,
-          efficitur vel massa.
-        </div>
-      </div>
-
-      <br>
-      <p>
-        This is a <b>slidein-left</b> animation.
-      </p>
-
-      <div class="example-box" p-animation="slidein-left">
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis lorem vitae mauris aliquam, sit amet posuere erat
-          posuere. Vivamus efficitur, mauris eget placerat mollis, felis ligula volutpat lorem, eget pellentesque arcu dui
-          sed nulla. Mauris non iaculis velit. Morbi id consectetur nisl. Aliquam turpis dui, aliquam a vestibulum quis,
-          efficitur vel massa.
-        </div>
-      </div>
-
-      <br>
-      <p>
-        This is a <b>blurin</b> animation.
-      </p>
-
-      <div class="example-box" p-animation="blurin">
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis lorem vitae mauris aliquam, sit amet posuere erat
-          posuere. Vivamus efficitur, mauris eget placerat mollis, felis ligula volutpat lorem, eget pellentesque arcu dui
-          sed nulla. Mauris non iaculis velit. Morbi id consectetur nisl. Aliquam turpis dui, aliquam a vestibulum quis,
-          efficitur vel massa.
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <div p-animation="rotate" p-duration="2000" style="width: 196px; height: 196px; background: black;">
+              Col 1
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div p-animation="scale" style="width: 196px; height: 196px; background: black;">
+              col 2
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div p-animation="blur" style="width: 196px; height: 196px; background: black;">
+              col 3
+            </div>
+          </div>
         </div>
       </div>
 
       <br/>
       <h2>Groups</h2>
 
-      <p>Of course, it's possible to combine multiple animations.</p>
+      <p>
+        Normally, an animation will be triggered the moment an element enters the viewport but it's possible to combine multiple
+        animations using groups. If it wasn't for groups, the animations of individual elements would load one by one, as
+        they enter the page, but that's not what we might want in some cases. If we have a panel, like the one above, we
+        might want the animations to start all at once, the moment the panel (not the elements) enter the screen.
+      </p>
     </div>
   </div>
 
@@ -155,29 +147,29 @@
 
     <div p-group="group1" class="container" style="width: 840px;  padding: 20px 0 60px 0; font-size: 0.9em;">
       <div class="row" style="width: 840px;">
-        <div p-animation="slidein-left" style="text-align: center;">
+        <div p-animation="horizontal" p-duration="1000" style="text-align: center;">
           <h1 style="color: white; text-shadow: 1px 2px 8px #000;">Hello There</h1>
         </div>
 
         <br>
 
         <div class="col-md-4">
-          <div class="red-box" p-animation="slidein">
-            <h3>slidein</h3>
+          <div class="red-box" p-animation="vertical" p-duration="1000">
+            <h3>vertical</h3>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
           </div>
         </div>
 
-        <div class="col-md-4" p-animation="blurin">
+        <div class="col-md-4" p-animation="rotate" p-duration="1000">
           <div class="red-box">
-            <h3>blurin</h3>
+            <h3>fade</h3>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
           </div>
         </div>
 
-        <div class="col-md-4" p-animation="colorin" p-delay="1000">
+        <div class="col-md-4" p-animation="colorize" p-duration="2300">
           <div class="red-box">
-            <h3>colorin</h3>
+            <h3>colorize</h3>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
           </div>
         </div>
@@ -189,29 +181,38 @@
     <div class="section-wrapper-840px">
       <br>
       <p>
-        If it wasn't for groups, the animations of individual elements would load one by one, as they enter the page, but that's
-        not what we might want in some cases. If we have a panel, like the one above, we might want the animations to start
-        all at once, the moment the panel (not the elements) enter the screen.
-      </p>
-      <p>
-        That's as simple as putting a <i>p-group</i> attribute on an HTML element wraping the group:
-      </p>
-
-      <script src="https://gist.github.com/toaderflorin/3efc377fa68b59204df9fee3026dd5d3.js"></script>
-      <br>
-      <p>
-        You might also not want the animations to start all at the same time. In this case you can add a delay like so:
+        That's as simple as putting a <i>p-group</i> attribute on an HTML element wraping the group.
       </p>
 
       <script src="https://gist.github.com/toaderflorin/2dcb99e97c0970b76d94393af0c069c0.js"></script>
+      <br>
+      <h2>Under The Hood</h2>
+      <p>
+        On <i>DOMContentLoaded</i> browser event, Puppeteer querries the DOM and builds a collection of groups and elements.
+        Puppeteer also reacts to the browser scroll event and checks whether a particular element or group has just entered
+        the viewport, and if so, it looks at the <i>p-animation</i> attribute of that element (it does this for each element
+        in the case of a group), and attempts to call a method in the <i>puppeteer.animations</i> namespace with the animation
+        name.
+      </p>
+      <script src="https://gist.github.com/toaderflorin/c443b3b33d397687b0ed33c130ce57ea.js"></script>
+      <p>
+        As you can see, the handling of the additional parameters such as <i>p-duration</i> and <i>p-delay</i> is the responsibility
+        of the animation handler, and they can be optional. This approach also makes it extremely simple to extend puppeteer
+        with your own custom animations, in which case you can add whatever attributes you need to the element.
+      </p>
+      <p>
+        Keep in mind that puppeteer converts kebab case animation name strings to camel case. For example, when encountering an element
+        with
+        <i>p-animation="my-animation"</i>, puppeteer will attempt to call <i>puppeteer.animations.myAnimation(element)</i>.
+      </p>
     </div>
   </div>
 
   <div class="footer">
-    <div class="footer-content">     
-      made by  <a href="http://achiral.io"><b>achiral</b><sup>©</sup></a>, check it out on
-      <a href="https://github.com/toaderflorin/pupeteer2">
-        <img src="github.png" width="21px;"/>
+    <div class="footer-content">
+      made by <a href="http://achiral.io"><b>achiral</b><sup>©</sup></a>, check it out on
+      <a href="https://github.com/toaderflorin/pupeteer2" style="font-size: 22px">
+        <i class="fa fa-github" aria-hidden="true"></i>
       </a>
     </div>
   </div>

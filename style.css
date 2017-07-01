@@ -17,6 +17,10 @@ h3 {
   font-size: 22px;
 }
 
+a, a:hover {
+  color: #839;
+}
+
 .header {
   position: fixed;
   left: 0px;
@@ -50,7 +54,7 @@ h3 {
 
 .outer-header-box {
   margin-top: 0;
-  background-image: url(pupeteer.png);
+  background-image: url(puppeteer.png);
   background-size: cover;
   height: calc(100% - 200px);
   width: 100%;
