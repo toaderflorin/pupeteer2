@@ -84,6 +84,7 @@ puppeteer.snakeToCamel = function(s) {
 puppeteer.animations.vertical = function(elem) {
   var delay = parseInt(elem.getAttribute('p-delay'));
   var duration = parseInt(elem.getAttribute('p-duration'));
+  var param = parseInt(elem.getAttribute('p-param'));
 
   if (isNaN(delay)) {
     delay = 0;
@@ -93,8 +94,12 @@ puppeteer.animations.vertical = function(elem) {
     duration = 500;
   } 
 
+  if (isNaN(param)) {
+    param = 20;
+  } 
+
   elem.animate([{
-    transform: 'translateY(20px)'
+    transform: `translateY(${param})`
   },
   {
     transform: 'translateY(0px)'
@@ -177,6 +182,7 @@ puppeteer.animations.colorize = function(elem) {
 puppeteer.animations.horizontal = function(elem) {
   var delay = parseInt(elem.getAttribute('p-delay'));
   var duration = parseInt(elem.getAttribute('p-duration'));
+  var param = parseInt(elem.getAttribute('p-param'));
 
   if (isNaN(delay)) {
     delay = 0;
@@ -186,8 +192,12 @@ puppeteer.animations.horizontal = function(elem) {
     duration = 500;
   } 
 
+  if (isNaN(param)) {
+    param = -40;
+  } 
+
   elem.animate([{
-    transform: 'translateX(-40px)'
+    transform: `translateX(${param}px)`
   },
   {
     transform: 'translateX(0px)'
@@ -201,6 +211,7 @@ puppeteer.animations.horizontal = function(elem) {
 puppeteer.animations.rotate = function(elem) {
   var delay = parseInt(elem.getAttribute('p-delay'));
   var duration = parseInt(elem.getAttribute('p-duration'));
+  var param = parseInt(elem.getAttribute('p-param'));
 
   if (isNaN(delay)) {
     delay = 0;
@@ -210,8 +221,12 @@ puppeteer.animations.rotate = function(elem) {
     duration = 500;
   } 
 
+  if (isNaN(param)) {
+    param = 30;
+  } 
+
   elem.animate([{
-    transform: 'rotate(15deg)'
+    transform: `rotate(${param}deg)`
   },
   {
     transform: 'rotate(0deg)'
@@ -225,6 +240,7 @@ puppeteer.animations.rotate = function(elem) {
 puppeteer.animations.scale = function(elem) {
   var delay = parseInt(elem.getAttribute('p-delay'));
   var duration = parseInt(elem.getAttribute('p-duration'));
+  var param = parseInt(elem.getAttribute('p-param'));
 
   if (isNaN(delay)) {
     delay = 0;
@@ -234,8 +250,12 @@ puppeteer.animations.scale = function(elem) {
     duration = 500;
   } 
 
+  if (isNaN(param)) {
+    param = 0.7;
+  }
+
   elem.animate([{
-    transform: 'scale(0.7)'
+    transform: `scale(${param})`
   },
   {
     transform: 'scale(1)'
@@ -248,7 +268,7 @@ puppeteer.animations.scale = function(elem) {
 
 puppeteer.animations.tv = function(elem) {
   var delay = parseInt(elem.getAttribute('p-delay'));
-  var duration = parseInt(elem.getAttribute('p-duration'));
+  var duration = parseInt(elem.getAttribute('p-duration'));  
 
   if (isNaN(delay)) {
     delay = 0;
