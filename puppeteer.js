@@ -99,7 +99,7 @@ puppeteer.animations.vertical = function(elem) {
   } 
 
   elem.animate([{
-    transform: `translateY(${param})`
+    transform: `translateY(${param}px)`
   },
   {
     transform: 'translateY(0px)'
