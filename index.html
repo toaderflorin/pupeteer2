@@ -37,7 +37,6 @@
   </div>
 
 
-
   <div style="height: 100%; background-color: white;">
     <div class="outer-header-box">
       <div class="inner-header-box">
@@ -89,31 +88,94 @@
       </p>
 
       <script src="https://gist.github.com/toaderflorin/973be5101b88206047fef82806038b26.js"></script>
-     
+
     </div>
   </div>
 
-  <div style="background: url(wood2.jpg); background-size: cover;">
+  <div style="background: white;">
     <div class="section-wrapper-840px">
       <br/>
       <h2>Animation Library</h2>
-
-      <div style="width: 250px; height: 300px; padding: 10px; background-color: #f3f3f3; display: flex; flex-direction: column; box-shadow: 0px 10px 23px -12px rgba(0, 0, 0, 0.4);">
+      <p>Here's the current collection of provided animations:</p>
+      <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
+      <div p-animation="rotate" class="polaroid">
         <div style="width: 230px; height: 230px; background: black;">
 
         </div>
         <div style="padding-top: 7px; text-align: center;">
-          Bla bla bla
+          rotate
         </div>
       </div>
 
-    
-    </div>
-  </div>
+      <div p-animation="colorize" class="polaroid">
+        <div style="width: 230px; height: 230px; background: red;">
 
-  <div style="background: linear-gradient(to bottom, #aaa, #bbb); height: 400px; max-height: 400px;">
-    <div class="section-wrapper-960px"></div>
-      <div style="color: white;">
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          colorize
+        </div>
+      </div>
+
+      <div p-animation="blur" class="polaroid">
+        <div style="width: 230px; height: 230px; background: black;">
+
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          blur
+        </div>
+      </div>
+
+       <div p-animation="vertical" class="polaroid">
+        <div style="width: 230px; height: 230px; background: black;">
+
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          vertical
+        </div>
+      </div>
+
+      <div p-animation="horizontal" class="polaroid">
+        <div style="width: 230px; height: 230px; background: black;">
+
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          horizontal
+        </div>
+      </div>
+
+       <div p-animation="fade" class="polaroid">
+        <div style="width: 230px; height: 230px; background: black;">
+
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          fade
+        </div>
+      </div>
+
+      <div p-animation="scale" class="polaroid">
+        <div style="width: 230px; height: 230px; background: black;">
+
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          scale
+        </div>
+      </div>
+
+      
+      <div p-animation="flip" class="polaroid" style="perspective: 50px;">
+        <div style="width: 230px; height: 230px; background: black;">
+
+        </div>
+        <div style="padding-top: 7px; text-align: center;">
+          flip
+        </div>
+      </div>
+
+      <div style="clear: both;">
+
+      </div>
+      </div>
+
       <br/>
       <h2>Groups</h2>
 
@@ -123,79 +185,87 @@
         they enter the page, but that's not what we might want in some cases. If we have a panel, like the one above, we
         might want the animations to start all at once, the moment the panel (not the elements) enter the screen.
       </p>
-      </div>
+    </div>
 
-    <div p-group="group1" class="container" style="width: 840px;  padding: 20px 0 60px 0; font-size: 0.9em;">
-      <div class="row" style="width: 840px;">
-        <div p-animation="horizontal" p-duration="1000" style="text-align: center;">
-          <h1 style="color: white; text-shadow: 1px 2px 8px #000;">Hello There</h1>
+  </div>
+  </div>
+
+  <div style="background: linear-gradient(to bottom, #aaa, #bbb); height: 400px; max-height: 400px;">
+    <div class="section-wrapper-960px"></div>
+    <div style="color: white;">
+
+
+      <div p-group="group1" class="container" style="width: 840px;  padding: 20px 0 60px 0; font-size: 0.9em;">
+        <div class="row" style="width: 840px;">
+          <div p-animation="horizontal" p-duration="1000" style="text-align: center;">
+            <h1 style="color: white; text-shadow: 1px 2px 8px #000;">Hello There</h1>
+          </div>
+
+          <br>
+
+          <div class="col-md-4">
+            <div class="red-box" p-animation="vertical" p-duration="1000">
+              <h3>vertical</h3>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+            </div>
+          </div>
+
+          <div class="col-md-4" p-animation="rotate" p-duration="1000">
+            <div class="red-box">
+              <h3>fade</h3>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+            </div>
+          </div>
+
+          <div class="col-md-4" p-animation="colorize" p-duration="2300">
+            <div class="red-box">
+              <h3>colorize</h3>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
+    <div class="section-white">
+      <div class="section-wrapper-840px">
         <br>
+        <p>
+          That's as simple as putting a <i>p-group</i> attribute on an HTML element wraping the group.
+        </p>
 
-        <div class="col-md-4">
-          <div class="red-box" p-animation="vertical" p-duration="1000">
-            <h3>vertical</h3>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
-          </div>
-        </div>
-
-        <div class="col-md-4" p-animation="rotate" p-duration="1000">
-          <div class="red-box">
-            <h3>fade</h3>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
-          </div>
-        </div>
-
-        <div class="col-md-4" p-animation="colorize" p-duration="2300">
-          <div class="red-box">
-            <h3>colorize</h3>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
-          </div>
-        </div>
+        <script src="https://gist.github.com/toaderflorin/2dcb99e97c0970b76d94393af0c069c0.js"></script>
+        <br>
+        <h2>Under The Hood</h2>
+        <p>
+          On <i>DOMContentLoaded</i> browser event, Puppeteer querries the DOM and builds a collection of groups and elements.
+          Puppeteer also reacts to the browser scroll event and checks whether a particular element or group has just entered
+          the viewport, and if so, it looks at the <i>p-animation</i> attribute of that element (it does this for each element
+          in the case of a group), and attempts to call a method in the <i>puppeteer.animations</i> namespace with the animation
+          name.
+        </p>
+        <script src="https://gist.github.com/toaderflorin/c443b3b33d397687b0ed33c130ce57ea.js"></script>
+        <p>
+          As you can see, the handling of the additional parameters such as <i>p-duration</i> and <i>p-delay</i> is the responsibility
+          of the animation handler, and they can be optional. This approach also makes it extremely simple to extend puppeteer
+          with your own custom animations, in which case you can add whatever attributes you need to the element.
+        </p>
+        <p>
+          Keep in mind that puppeteer converts kebab case animation name strings to camel case. For example, when encountering an element
+          with
+          <i>p-animation="my-animation"</i>, puppeteer will attempt to call <i>puppeteer.animations.myAnimation(element)</i>.
+        </p>
       </div>
     </div>
-  </div>
 
-  <div class="section-white">
-    <div class="section-wrapper-840px">
-      <br>
-      <p>
-        That's as simple as putting a <i>p-group</i> attribute on an HTML element wraping the group.
-      </p>
-
-      <script src="https://gist.github.com/toaderflorin/2dcb99e97c0970b76d94393af0c069c0.js"></script>
-      <br>
-      <h2>Under The Hood</h2>
-      <p>
-        On <i>DOMContentLoaded</i> browser event, Puppeteer querries the DOM and builds a collection of groups and elements.
-        Puppeteer also reacts to the browser scroll event and checks whether a particular element or group has just entered
-        the viewport, and if so, it looks at the <i>p-animation</i> attribute of that element (it does this for each element
-        in the case of a group), and attempts to call a method in the <i>puppeteer.animations</i> namespace with the animation
-        name.
-      </p>
-      <script src="https://gist.github.com/toaderflorin/c443b3b33d397687b0ed33c130ce57ea.js"></script>
-      <p>
-        As you can see, the handling of the additional parameters such as <i>p-duration</i> and <i>p-delay</i> is the responsibility
-        of the animation handler, and they can be optional. This approach also makes it extremely simple to extend puppeteer
-        with your own custom animations, in which case you can add whatever attributes you need to the element.
-      </p>
-      <p>
-        Keep in mind that puppeteer converts kebab case animation name strings to camel case. For example, when encountering an element
-        with
-        <i>p-animation="my-animation"</i>, puppeteer will attempt to call <i>puppeteer.animations.myAnimation(element)</i>.
-      </p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-content">
-      made by <a href="http://achiral.io"><b>achiral</b><sup>©</sup></a>, check it out on
-      <a href="https://github.com/toaderflorin/pupeteer2" style="font-size: 22px">
+    <div class="footer">
+      <div class="footer-content">
+        made by <a href="http://achiral.io"><b>achiral</b><sup>©</sup></a>, check it out on
+        <a href="https://github.com/toaderflorin/pupeteer2" style="font-size: 22px">
         <i class="fa fa-github" aria-hidden="true"></i>
       </a>
+      </div>
     </div>
-  </div>
 </body>
 
 </html>

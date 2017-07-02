@@ -150,3 +150,15 @@ a, a:hover {
   width: 840px;
   max-width: 840px;
 }
+
+.polaroid {
+  margin: 30px 30px 0 0; 
+  float:left; 
+  width: 250px; 
+  height: 280px; 
+  padding: 10px; 
+  background-color: #eee; 
+  display: flex; 
+  flex-direction: column; 
+  box-shadow: 0px 10px 23px -12px rgba(0, 0, 0, 0.5);
+}

@@ -245,3 +245,27 @@ puppeteer.animations.scale = function(elem) {
     }
   );
 }
+
+puppeteer.animations.flip = function(elem) {
+  var delay = parseInt(elem.getAttribute('p-delay'));
+  var duration = parseInt(elem.getAttribute('p-duration'));
+
+  if (isNaN(delay)) {
+    delay = 0;
+  }
+
+  if (isNaN(duration)) {
+    duration = 500;
+  } 
+
+  elem.animate([{
+    transform: 'rotateX(90deg)'
+  },
+  {
+    transform: 'rotateX(0deg)'
+  }], {
+      delay: delay,
+      duration: duration
+    }
+  );
+}
