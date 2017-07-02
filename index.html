@@ -24,7 +24,6 @@
     }
   </script>
 
-
   <div class="header">
     <div class="header-content">
       <div class="header-item">
@@ -35,7 +34,6 @@
       </div>
     </div>
   </div>
-
 
   <div style="height: 100%; background-color: white;">
     <div class="outer-header-box">
@@ -54,7 +52,6 @@
         </div>
       </div>
     </div>
-
 
     <div id="xyz" class="body-content" style="cursor: pointer; text-align: center; height: 200px; padding-top: 0; align-items: center; justify-content: center;">
       <div style="height: 70px;">
@@ -88,7 +85,30 @@
       </p>
 
       <script src="https://gist.github.com/toaderflorin/973be5101b88206047fef82806038b26.js"></script>
+      <p>And it looks like this:</p>
+      <div class="example-box" p-animation="horizontal">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra, dolor nec molestie molestie, mauris nisl pretium
+        lorem, a condimentum diam orci ac arcu. Quisque vitae felis et arcu bibendum finibus in non eros. Phasellus diam
+        mauris, mattis nec faucibus id, auctor a lectus. Praesent rhoncus ornare nunc, sit amet mollis lorem placerat vitae.
+        Pellentesque tristique varius tellus, ut aliquet enim. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Duis eget dolor suscipit, congue quam sed, consectetur diam.
+      </div>
 
+      <br>
+      <p>
+        Turns out, we can customize our animation.
+      </p>
+
+      <script src="https://gist.github.com/toaderflorin/225aa38684c5e4a7bd66b714df5a9b29.js"></script>
+      <p>
+        Which looks like this:
+      </p>
+      <div class="example-box" p-animation="horizontal" p-delay="500" p-duration="3000">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra, dolor nec molestie molestie, mauris nisl pretium
+        lorem, a condimentum diam orci ac arcu. Quisque vitae felis et arcu bibendum finibus in non eros. Phasellus diam
+        mauris, mattis nec faucibus id, auctor a lectus. Praesent rhoncus ornare nunc, sit amet mollis lorem placerat vitae.
+        Pellentesque tristique varius tellus, ut aliquet enim. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Duis eget dolor suscipit, congue quam sed, consectetur diam.
     </div>
   </div>
 
@@ -98,82 +118,74 @@
       <h2>Animation Library</h2>
       <p>Here's the current collection of provided animations:</p>
       <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
-      <div p-animation="rotate" class="polaroid">
-        <div style="width: 230px; height: 230px; background: black;">
-
+        <div p-animation="rotate" class="polaroid">
+          <div style="width: 230px; height: 230px; background: black;">
+          </div>
+          <div style="text-align: center;">
+            <h3>rotate</h3>
+          </div>
         </div>
-        <div style="padding-top: 7px; text-align: center;">
-          rotate
+
+        <div p-animation="colorize" class="polaroid">
+          <div style="width: 230px; height: 230px; background: red;">
+          </div>
+          <div style="text-align: center;">
+            <h3>colorize</h3>
+          </div>
         </div>
-      </div>
 
-      <div p-animation="colorize" class="polaroid">
-        <div style="width: 230px; height: 230px; background: red;">
-
+        <div p-animation="blur" class="polaroid">
+          <div style="width: 230px; height: 230px; background: black;">
+          </div>
+          <div style="text-align: center;">
+            <h3>blur</h3>
+          </div>
         </div>
-        <div style="padding-top: 7px; text-align: center;">
-          colorize
+
+        <div p-animation="vertical" class="polaroid">
+          <div style="width: 230px; height: 230px; background: black;">
+          </div>
+          <div style="text-align: center;">
+            <h3>vertical</h3>
+          </div>
         </div>
-      </div>
 
-      <div p-animation="blur" class="polaroid">
-        <div style="width: 230px; height: 230px; background: black;">
-
+        <div p-animation="horizontal" class="polaroid">
+          <div style="width: 230px; height: 230px; background: black;">
+          </div>
+          <div style="text-align: center;">
+            <h3>horizontal</h3>
+          </div>
         </div>
-        <div style="padding-top: 7px; text-align: center;">
-          blur
+
+        <div p-animation="fade" class="polaroid">
+          <div style="width: 230px; height: 230px; background: black;">
+          </div>
+          <div style="text-align: center;">
+            <h3>fade</h3>
+          </div>
         </div>
-      </div>
 
-       <div p-animation="vertical" class="polaroid">
-        <div style="width: 230px; height: 230px; background: black;">
+        <div p-animation="scale" class="polaroid">
+          <div style="width: 230px; height: 230px; background: black;">
 
+          </div>
+          <div style="text-align: center;">
+            <h3>scale</h3>
+          </div>
         </div>
-        <div style="padding-top: 7px; text-align: center;">
-          vertical
+
+
+        <div p-animation="tv" class="polaroid" style="perspective: 50px;">
+          <div style="width: 230px; height: 230px; background: black;">
+          </div>
+          <div style="text-align: center;">
+            <h3>tv</h3>
+          </div>
         </div>
-      </div>
 
-      <div p-animation="horizontal" class="polaroid">
-        <div style="width: 230px; height: 230px; background: black;">
-
+        <div style="clear: both;">
         </div>
-        <div style="padding-top: 7px; text-align: center;">
-          horizontal
-        </div>
-      </div>
-
-       <div p-animation="fade" class="polaroid">
-        <div style="width: 230px; height: 230px; background: black;">
-
-        </div>
-        <div style="padding-top: 7px; text-align: center;">
-          fade
-        </div>
-      </div>
-
-      <div p-animation="scale" class="polaroid">
-        <div style="width: 230px; height: 230px; background: black;">
-
-        </div>
-        <div style="padding-top: 7px; text-align: center;">
-          scale
-        </div>
-      </div>
-
-      
-      <div p-animation="flip" class="polaroid" style="perspective: 50px;">
-        <div style="width: 230px; height: 230px; background: black;">
-
-        </div>
-        <div style="padding-top: 7px; text-align: center;">
-          flip
-        </div>
-      </div>
-
-      <div style="clear: both;">
-
-      </div>
       </div>
 
       <br/>
@@ -188,13 +200,9 @@
     </div>
 
   </div>
-  </div>
 
-  <div style="background: linear-gradient(to bottom, #aaa, #bbb); height: 400px; max-height: 400px;">
-    <div class="section-wrapper-960px"></div>
+  <div style="background: linear-gradient(to bottom, #aaa, #bbb); height: 400px; max-height: 400px;">    
     <div style="color: white;">
-
-
       <div p-group="group1" class="container" style="width: 840px;  padding: 20px 0 60px 0; font-size: 0.9em;">
         <div class="row" style="width: 840px;">
           <div p-animation="horizontal" p-duration="1000" style="text-align: center;">

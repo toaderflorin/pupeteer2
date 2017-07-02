@@ -246,7 +246,7 @@ puppeteer.animations.scale = function(elem) {
   );
 }
 
-puppeteer.animations.flip = function(elem) {
+puppeteer.animations.tv = function(elem) {
   var delay = parseInt(elem.getAttribute('p-delay'));
   var duration = parseInt(elem.getAttribute('p-duration'));
 
