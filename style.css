@@ -183,31 +183,31 @@ a, a:hover {
 }
 
 .polaroid-pic-dylan {
-  background-image: url(bob.jpg);
+  background-image: url(./pics/bob.jpg);
 }
 
 .polaroid-pic-met {
-  background-image: url(met.jpg);
+  background-image: url(./pics/met.jpg);
 }
 
 .polaroid-pic-srv {
-  background-image: url(srv.jpg);
+  background-image: url(./pics/srv.jpg);
 }
 
 .polaroid-pic-place {
-  background-image: url(place.jpg);
+  background-image: url(./pics/place.jpg);
 }
 
 .polaroid-pic-hendrix {
-  background-image: url(hendrix.jpg);
+  background-image: url(./pics/hendrix.jpg);
 }
 
 .polaroid-pic-tower {
-  background-image: url(tower.jpg);
+  background-image: url(./pics/tower.jpg);
 }
 
 .polaroid-pic-tracy {
-  background-image: url(tracy.jpg);
+  background-image: url(./pics/tracy.jpg);
 }
 
 .group {
@@ -232,6 +232,8 @@ a, a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  text-align: center;
   background: linear-gradient(to bottom, #b5f, #839);
   height: 220px;
   width: 260px;
