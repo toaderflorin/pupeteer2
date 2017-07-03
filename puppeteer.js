@@ -19,8 +19,8 @@ puppeteer.update = function () {
         eval(`puppeteer.animations.${animMethod}(elem)`);
         elem.visible = true;
       }
-    } else if (rect.top > window.innerHeight) {
-      elem.visible = false;
+    } else if (rect.bottom > window.innerHeight) {
+      // elem.visible = false;
     }
   });
 
@@ -39,7 +39,7 @@ puppeteer.update = function () {
       }
 
       grp.visible = true;
-    } else if (rect.top > window.innerHeight) {
+    } else if (rect.bottom > window.innerHeight) {
       grp.visible = false;
     }
   });
@@ -222,7 +222,7 @@ puppeteer.animations.rotate = function(elem) {
   } 
 
   if (isNaN(param)) {
-    param = 30;
+    param = 15;
   } 
 
   elem.animate([{
@@ -259,30 +259,6 @@ puppeteer.animations.scale = function(elem) {
   },
   {
     transform: 'scale(1)'
-  }], {
-      delay: delay,
-      duration: duration
-    }
-  );
-}
-
-puppeteer.animations.tv = function(elem) {
-  var delay = parseInt(elem.getAttribute('p-delay'));
-  var duration = parseInt(elem.getAttribute('p-duration'));  
-
-  if (isNaN(delay)) {
-    delay = 0;
-  }
-
-  if (isNaN(duration)) {
-    duration = 500;
-  } 
-
-  elem.animate([{
-    transform: 'rotateX(90deg)'
-  },
-  {
-    transform: 'rotateX(0deg)'
   }], {
       delay: delay,
       duration: duration

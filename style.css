@@ -152,18 +152,79 @@ a, a:hover {
 }
 
 .polaroid {
-  margin: 30px 30px 0 0; 
+  margin: 20px 20px 0 0; 
   float:left; 
-  width: 250px; 
-  height: 280px; 
-  padding: 10px; 
-  background-color: #eee; 
+  width: 260px; 
+  height: 300px; 
+  padding: 15px; 
+  background: linear-gradient(to bottom, #eee, #f5f5f5); 
   display: flex; 
   flex-direction: column; 
   box-shadow: 0px 10px 23px -12px rgba(0, 0, 0, 0.7);
+  /*box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.24);*/
+  cursor: pointer;
 }
 
 .polaroid h3 {
-  margin-top: 2px;
+  margin-top: 4px;
   padding-top: 0px;
+  margin-bottom: 4px;
+  padding-bottom: 0px;
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.title-box {
+  display: flex; 
+  margin: auto; 
+  width: 600px; 
+  max-width: 600px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.polaroid-title {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  color: #777;
+  line-height: 1.2;
+  font-size: 12px;
+  text-align: center;
+  height: 70px;
+}
+
+.polaroid-pic {
+  width: 230px; 
+  height: 230px; 
+  background-size: cover;
+}
+
+.polaroid-pic-dylan {
+  background-image: url(bob.jpg);
+}
+
+.polaroid-pic-met {
+  background-image: url(met.jpg);
+}
+
+.polaroid-pic-srv {
+  background-image: url(srv.jpg);
+}
+
+.polaroid-pic-place {
+  background-image: url(place.jpg);
+}
+
+.polaroid-pic-hendrix {
+  background-image: url(hendrix.jpg);
+}
+
+.polaroid-pic-tower {
+  background-image: url(tower.jpg);
+}
+
+.polaroid-pic-tracy {
+  background-image: url(tracy.jpg);
 }

@@ -38,7 +38,9 @@
   <div style="height: 100%; background-color: white;">
     <div class="outer-header-box">
       <div class="inner-header-box">
-        <div style="display: flex; margin: auto; width: 600px; max-width: 600px; flex-wrap: wrap; justify-content: center;">
+
+
+        <div class="title-box">
           <div style="width: 640px; font-size: 60px; line-height: 1.3; font-family: 'Amatica SC'; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
             <span style="color: #b5f;">puppeteer</span> (pre-alpha)
           </div>
@@ -50,6 +52,8 @@
             <div style="width:110px; height:20px; border-bottom: 2px solid #b5f;"></div>
           </div>
         </div>
+
+
       </div>
     </div>
 
@@ -116,69 +120,84 @@
       <div class="section-wrapper-840px">
         <br/>
         <h2>Animation Library</h2>
-        <p>Here's the current collection of provided animations:</p>
+        <p>Click on the polaroids to see a demo of the animation.</p>
         <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: left;">
-          <div p-animation="rotate" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(bob.jpg); background-size: cover;">
+
+          <!-- polaroids -->
+
+          <div class="polaroid" onclick="puppeteer.animations.rotate(this)">
+            <div class="polaroid-pic polaroid-pic-dylan">
             </div>
-            <div style="text-align: center;">
+            <div class="polaroid-title">
               <h3>rotate</h3>
+              <div>p-param indicates the number of degrees to rotate. Negative values are supported.</div>
             </div>
           </div>
 
-          <div p-animation="colorize" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(met.jpg); background-size: cover;">
+          <div p-duration="2000" class="polaroid" onclick="puppeteer.animations.colorize(this)">
+            <div class="polaroid-pic polaroid-pic-met">
             </div>
-            <div style="text-align: center;">
+            <div class="polaroid-title">
               <h3>colorize</h3>
+              <div><i>p-param</i> indicates the amount of pixels to slide.</div>
             </div>
           </div>
 
-          <div p-animation="blur" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(srv.jpg); background-size: cover;">
+          <div p-duration="1000" class="polaroid" onclick="puppeteer.animations.blur(this)">
+            <div class="polaroid-pic polaroid-pic-srv">
             </div>
-            <div style="text-align: center;">
+            <div class="polaroid-title">
               <h3>blur</h3>
+              <div><i>p-param</i> indicates the amount of pixels to use for the gaussian blur filter.</div>
             </div>
           </div>
 
-          <div p-animation="horizontal" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(place.jpg); background-size: cover;">
+          <div class="polaroid" onclick="puppeteer.animations.horizontal(this)">
+            <div class="polaroid-pic polaroid-pic-place">
             </div>
-            <div style="text-align: center;">
+            <div class="polaroid-title">
               <h3>horizontal</h3>
+              <div><i>p-param</i> indicates the amount of pixels to slide horizontally. Negative values are supported.</div>
             </div>
           </div>
 
-
-          <div p-animation="vertical" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(hendrix.jpg); background-size: cover;">
+          <div class="polaroid" onclick="puppeteer.animations.vertical(this)">
+            <div class="polaroid-pic polaroid-pic-hendrix">
             </div>
-            <div style="text-align: center;">
+            <div class="polaroid-title">
               <h3>vertical</h3>
+              <div><i>p-param</i> indicates the amount of pixels to slide vertically. Negative values are supported.</div>
             </div>
           </div>
 
-          <div p-animation="fade" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(tracy.jpg); background-size: cover;">
-            </div>
-            <div style="text-align: center;">
-              <h3>fade</h3>
-            </div>
-          </div>
-
-          <div p-animation="scale" class="polaroid">
-            <div style="width: 230px; height: 230px; background-image: url(albertina.jpg); background-size: cover;">
+          <div class="polaroid" onclick="puppeteer.animations.scale(this)">
+            <div class="polaroid-pic polaroid-pic-tower">
 
             </div>
-            <div style="text-align: center;">
+            <div class="polaroid-title">
               <h3>scale</h3>
+              <div><i>p-param</i> indicates the starting ratio, 0 means a dot 1 is 100%. Values greater than one are supported.</div>
+            </div>
+          </div>
+
+          <div p-duration="1000" class="polaroid" onclick="puppeteer.animations.fade(this)">
+            <div class="polaroid-pic polaroid-pic-tracy">
+            </div>
+            <div class="polaroid-title">
+              <h3>fade</h3>
+              <div><i>p-param</i> indicates the starting opacity, must be between 0 means and 1.</div>
             </div>
           </div>
 
           <div style="clear: both;">
           </div>
         </div>
+
+        <br>
+        <p>
+          You can call an animation programatically like this:
+        </p>
+        <script src="https://gist.github.com/toaderflorin/f5a5d830f647eb2aab4a131946bdb665.js"></script>
 
         <br/>
         <h2>Groups</h2>
@@ -193,7 +212,7 @@
 
     </div>
 
-    <div style="background: linear-gradient(to bottom, #aaa, #bbb); height: 400px; max-height: 400px;">
+    <div style="background: linear-gradient(to bottom, #999, #ddd); height: 400px; max-height: 400px;">
       <div style="color: white;">
         <div p-group="group1" class="container" style="width: 840px;  padding: 20px 0 60px 0; font-size: 0.9em;">
           <div class="row" style="width: 840px;">
@@ -210,7 +229,7 @@
               </div>
             </div>
 
-            <div class="col-md-4" p-animation="rotate" p-duration="1000">
+            <div class="col-md-4" p-animation="fade" p-duration="1000">
               <div class="red-box">
                 <h3>fade</h3>
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
@@ -243,6 +262,9 @@
             the viewport, and if so, it looks at the <i>p-animation</i> attribute of that element (it does this for each
             element in the case of a group), and attempts to call a method in the <i>puppeteer.animations</i> namespace with
             the animation name.
+          </p>
+          <p>
+            Here's what the <i>rotate</i> animation looks like:
           </p>
           <script src="https://gist.github.com/toaderflorin/c443b3b33d397687b0ed33c130ce57ea.js"></script>
           <p>
