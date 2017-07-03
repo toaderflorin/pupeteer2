@@ -14,7 +14,7 @@ h1, h2, h3 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 1.1em;
 }
 
 a, a:hover {
@@ -30,7 +30,6 @@ a, a:hover {
   color: #b5f ;
   background-color: rgba(0, 0, 0, 0.85);
   font-weight: 100;
-  font-size: 16px;
   width: 100%;
   height: 48px;
   line-height: 48px;
@@ -87,19 +86,22 @@ a, a:hover {
   margin-right: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 13px;
+  font-size: 0.9em;
   min-height: 56px;
   text-align: center;
 }
 
-.red-box {
+.group-box {
   background: linear-gradient(to bottom, #b5f, #839);
   height: 210px;
+  width: 260px;
   max-height: 2530px;
   padding: 10px 35px;
   border-radius: 10px;
   color: white;
   box-shadow: 0px 12px 23px -9px rgba(0, 0, 0, 0.7);
+  float:left;
+  margin: 20px 20px 0 0; 
 }
 
 .section-white {
@@ -125,18 +127,6 @@ a, a:hover {
 .section-wrapper-840px {
   padding: 10px 0;
   width: 840px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-wrapper-780px {
-  width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-wrapper-720px {
-  width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -171,7 +161,7 @@ a, a:hover {
   margin-bottom: 4px;
   padding-bottom: 0px;
   line-height: 1.2;
-  font-size: 16px;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
@@ -184,13 +174,17 @@ a, a:hover {
   justify-content: center;
 }
 
+.polaroid-container {
+  width: 100%; display: flex; flex-wrap: wrap; justify-content: left;
+}
+
 .polaroid-title {
   display: flex;
   justify-content: center;
   flex-flow: column;
   color: #777;
   line-height: 1.2;
-  font-size: 12px;
+  font-size: 0.8em;
   text-align: center;
   height: 70px;
 }
@@ -227,4 +221,64 @@ a, a:hover {
 
 .polaroid-pic-tracy {
   background-image: url(tracy.jpg);
+}
+
+.group {
+  background: linear-gradient(to bottom, #999, #ddd); 
+  min-height: 400px; 
+  flex-grow: 1;
+}
+
+.group-inner {
+  margin-left: auto; 
+  margin-right: auto; 
+  display: flex;
+  flex-direction: column;
+  color: white; 
+  width: 840px;  
+  padding: 20px 0 60px 0; 
+  font-size: 0.9em;
+  flex-grow: 1;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 667px) {
+  body {
+    font-size: 30px;
+  }
+
+  h2  {
+    font-size: 1.4em;
+  }
+
+  .group-box {
+    min-height: 210px;
+    line-height: 1.3;
+    font-size: 0.7em;
+  }
+
+  .polaroid {
+    width: 380px;
+    height: 490px;
+  }
+
+  .polaroid-pic {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .polaroid-title {
+    height: 120px;
+    font-size: 0.7em;
+  }
+  
+  .header {
+    height: 72px;
+  }
+
+  .header-item {
+    height: 72px;
+    line-height: 72px;
+  }
 }
