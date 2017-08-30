@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="web-animations.min.js"></script>
   <script src="puppeteer.js"></script>
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -19,13 +20,13 @@
     }
 
     function start() {
-      var el = document.getElementById("xyz");
+      var el = document.getElementById("start");
       el.scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
-  <div class="header">
-    <div class="header-content">
+  <div id="header" class="header">
+    <div id="header-content">
       <div class="header-item">
         <i class="fa fa-film" aria-hidden="true"></i>
         <b onclick="scrollToTop()" style="cursor: pointer;">
@@ -39,23 +40,23 @@
     <div class="outer-header-box">
       <div class="inner-header-box">
         <div class="title-box">
-          <div style="width: 640px; font-size: 4em; line-height: 1.3; font-family: 'Amatica SC'; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);">
-            <span style="color: #b5f;">puppeteer</span> (pre-alpha)
+          <div class="title-div">
+            <span>puppeteer</span> <span style="color: white;">(alpha)<span>
           </div>
-          <div style="width: 640px; padding: 15px; line-height: 1.5; padding-bottom: 10px; margin-left: auto; margin-right: auto; ">
+          <div class="subtitle">
             <b>puppeteer</b> is a scroll aware, mobile first, animation library for creating presentation websites. It is
             currently work in progress and not ready for production.
           </div>
           <div>
-            <div style="width:110px; height:20px; border-bottom: 2px solid #b5f;"></div>
+            <div id="line1"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="xyz" class="body-content" style="cursor: pointer; text-align: center; height: 200px; padding-top: 0; align-items: center; justify-content: center;">
+    <div id="start" class="body-content" style="cursor: pointer; text-align: center; height: 200px; padding-top: 0; align-items: center; justify-content: center;">
       <div style="height: 70px;">
-        <div style="width :40px; height: 60px; border-bottom: 2px solid #b5f; margin-left: auto; margin-right: auto;"></div>
+        <div id="line2"></div>
       </div>
       <div style="height: 70px; font-size: 1.9em; line-height: 70px; font-family: 'Amatica SC';" onclick="start()">
         Try it!
@@ -76,6 +77,12 @@
       </p>
 
       <script src="https://gist.github.com/toaderflorin/d983f06a902e124d83477e8ce5063963.js"></script>
+
+      <p>
+        Puppeteer needs the <i>web-animations</i> polyfill, because currently IE/Edge and Safari do not support the 
+        <i>object.animate()</i> method. Even so, the polyfill doesn't support filter animations such as blur or colorize.
+        Check it out <a href="https://github.com/web-animations/web-animations-js">here</a>.
+      </p>
 
       <br>
       <h2>Basic Examples</h2>
@@ -216,19 +223,19 @@
 
       <br>
       <div style="display: flex; flex-grow: 2;">
-        <div class="group-box" p-animation="vertical" p-duration="1000">
+        <div class="group-box" p-animation="vertical" p-duration="500" p-param="30">
           <div style="display:inline-block;">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
           </div>
         </div>
 
-        <div class="group-box" p-animation="fade" p-duration="1000">
+        <div class="group-box" p-animation="vertical" p-delay="500" p-duration="500"  p-param="30">
           <p>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
           </p>
         </div>
 
-        <div class="group-box" p-animation="colorize" p-duration="2300">
+        <div class="group-box" p-animation="vertical" p-delay="1000" p-duration="500"  p-param="30">
           <p>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
           </p>
